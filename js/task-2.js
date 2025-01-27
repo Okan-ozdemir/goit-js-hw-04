@@ -1,3 +1,12 @@
+function calcAverageCalories(days) {
+  // Eğer boş bir dizi verilirse, 0 döndür
+  if (days.length === 0) return 0;
+
+  // Günlük kalori miktarlarını toplayarak ortalama hesapla
+  const totalCalories = days.reduce((sum, day) => sum + day.calories, 0);
+  return totalCalories / days.length;
+}
+
 console.log(
   calcAverageCalories([
     { day: 'monday', calories: 3010 },
